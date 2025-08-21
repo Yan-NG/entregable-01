@@ -1,0 +1,15 @@
+<mat-toolbar class="sidebar" >
+  <mat-sidenav-container class="sidebar-menu" [style.width]="sidenavWidth()">
+    <mat-sidenav mode="side" opened [style.width]="sidenavWidth()">
+      <button mat-icon-button (click)="collapsed.set(!collapsed())" >
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button>
+      <app-sidebar-collapsed />
+      <mat-nav-list>
+        <router-outlet></router-outlet>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content></mat-sidenav-content>
+  </mat-sidenav-container>
+</mat-toolbar>
+
